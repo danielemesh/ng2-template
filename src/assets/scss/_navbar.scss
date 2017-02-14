@@ -1,13 +1,12 @@
 .navbar {
-  opacity: 0.5;
+  opacity: 0.9;
   height: $navbar-height;
   background-color: #fff;
   
   .navbar-container {
     @extend %clearfix;
-    height: 100%;
     
-    > * {
+    &, > * {
       height: 100%;
     }
   }
@@ -21,16 +20,79 @@
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+    width: 80px;
+    height: auto;
   }
   
-  .menu-wrapper {
+  
+  /* Menu
+  =============== */
+  $menu-font-size: 13px;
+  
+  .menu {
     float: right;
+    line-height: $navbar-height;
+    font-size: 0;
+    font-family: $ff-segoe;
+    color: #454545;
   }
   
+  .menu-item {
+    display: inline-block;
+    padding: 0 1em;
+    font-size: $menu-font-size;
+  }
+  
+  .menu-item-link {
+    display: block;
+  
+    &.login-btn {
+      position: relative;
+      display: inline;
+      padding: 6px 12px 6px 30px;
+      border-radius: 3px;
+      color: #fff;
+      background-color: #de6d6e;
+      
+      &:before {
+        display: block;
+        position: absolute;
+        top: 6px;
+        left: 12px;
+        width: 13px;
+        height: 14px;
+        background: url("assets/images/icon-person.png") no-repeat;
+        content: "";
+      }
+    }
+  }
 }
 
+
+/* Desktop
+======================
+ */
 @include desktop {
   .navbar {
     height: $dt-navbar-height;
+    
+    .logo {
+      width: auto;
+    }
+  
+    $dt-menu-font-size: 17px;
+    .menu {
+      line-height: $dt-navbar-height;
+    }
+    
+    .menu-item-link {
+      font-size: $dt-menu-font-size;
+      
+      &.login-btn {
+        &:before {
+          top: 10px;
+        }
+      }
+    }
   }
 }
