@@ -17,3 +17,13 @@
   font-weight: 300;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Alte Haas Grotesk';
+  src: url('assets/fonts/AlteHaasGrotesk_Bold.eot');
+  src: url('assets/fonts/AlteHaasGrotesk_Bold.eot?#iefix') format('embedded-opentype'),
+  url('assets/fonts/AlteHaasGrotesk_Bold.woff') format('woff'),
+  url('assets/fonts/AlteHaasGrotesk_Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
