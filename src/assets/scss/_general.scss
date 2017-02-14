@@ -1,0 +1,9 @@
+.container {
+  padding: 0 $container-gutter;
+
+  @include desktop {
+    width: $dt-container-width;
+    padding: 0 $dt-container-gutter;
+    margin: 0 auto;
+  }
+}

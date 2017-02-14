@@ -1,0 +1,36 @@
+.navbar {
+  opacity: 0.5;
+  height: $navbar-height;
+  background-color: #fff;
+  
+  .navbar-container {
+    @extend %clearfix;
+    height: 100%;
+    
+    > * {
+      height: 100%;
+    }
+  }
+  
+  .logo-wrapper {
+    float: left;
+  }
+  
+  .logo {
+    display: block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .menu-wrapper {
+    float: right;
+  }
+  
+}
+
+@include desktop {
+  .navbar {
+    height: $dt-navbar-height;
+  }
+}
