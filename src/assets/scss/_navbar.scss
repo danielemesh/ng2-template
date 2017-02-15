@@ -24,11 +24,8 @@
     height: auto;
   }
   
-  
   /* Menu
   =============== */
-  $menu-font-size: 13px;
-  
   .menu {
     float: right;
     line-height: $navbar-height;
@@ -40,12 +37,12 @@
   .menu-item {
     display: inline-block;
     padding: 0 1em;
-    font-size: $menu-font-size;
+    font-size: 13px;
   }
   
   .menu-item-link {
     display: block;
-  
+    
     &.login-btn {
       position: relative;
       display: inline;
@@ -61,17 +58,15 @@
         left: 12px;
         width: 13px;
         height: 14px;
-        background: url("assets/images/icon-person.png") no-repeat;
+        background: url('#{$img-path}/icon-person.png') no-repeat;
         content: "";
       }
     }
   }
 }
 
-
 /* Desktop
-======================
- */
+============================= */
 @include desktop {
   .navbar {
     height: $dt-navbar-height;
@@ -79,14 +74,13 @@
     .logo {
       width: auto;
     }
-  
-    $dt-menu-font-size: 17px;
+    
     .menu {
       line-height: $dt-navbar-height;
     }
     
     .menu-item-link {
-      font-size: $dt-menu-font-size;
+      font-size: 17px;
       
       &.login-btn {
         &:before {

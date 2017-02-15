@@ -1,7 +1,9 @@
+/* Mobile
+============================= */
 .header {
   position: relative;
-  height: 400px;
-  background: url('assets/images/header-bg.jpg') no-repeat;
+  height: $header-height;
+  background: url('#{$img-path}/header-bg.jpg') no-repeat;
   background-size: cover;
   
   .header-text-wrapper {
@@ -19,19 +21,16 @@
   }
   
   .header-text-subtext {
-    font-family: $ff-univers-lt;
     font-size: 0.35em;
   }
 }
 
-
 /* Desktop
-======================
- */
+============================= */
 @include desktop {
   .header {
-    height: 590px;
-  
+    height: $dt-header-height;
+    
     .header-text-wrapper {
       font-size: 70px;
     }

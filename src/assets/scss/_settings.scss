@@ -1,19 +1,23 @@
 // Global Variables
 
-// Fonts
-$ff-univers-lt: "Univers LT 45";
-$ff-segoe: "Segoe UI";
-$ff-atlas-bold: "Alte Haas Grotesk";
+$img-path: 'assets/images/';
+$fonts-path: 'assets/fonts';
 
+/* Fonts
+============================= */
+$ff-univers-lt: 'Univers LT 45';
+$ff-segoe: 'Segoe UI';
+$ff-atlas-bold: 'Alte Haas Grotesk';
 
-// Mobile
+/* Mobile
+============================= */
+$header-height: 400px;
 $navbar-height: 60px;
-
 $container-gutter: 15px;
 
-// Desktop (dt => desktop)
+/* Desktop (dt => desktop)
+============================= */
+$dt-header-height: 590px;
 $dt-container-width: 1024px;
 $dt-container-gutter: 35px;
-
-// Navbar
 $dt-navbar-height: 90px;

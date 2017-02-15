@@ -15,7 +15,7 @@ $desktop-width: 1024px;
 
 @mixin clearfix {
   &:after {
-    content: "";
+    content: '';
     display: table;
     clear: both;
   }
