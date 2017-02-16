@@ -2,4 +2,39 @@
   padding: 35px 0;
   background: url('#{$img-path}/footer-bg.jpg') no-repeat;
   background-size: cover;
+  
+  
+}
+
+@include desktop {
+  .site-footer {
+    
+  }
+  
+  .footer-nav {
+    float: left;
+    width: 60%;
+    font-size: 22px;
+    line-height: 22px;
+  }
+  
+  .footer-menu {
+    @include justify-elements;
+    
+    .menu-item {
+      font-size: 1em;
+      color: #aeaeae;
+    }
+    
+    .sub-menu {
+      padding-top: 25px;
+      font-size: 0.7em;
+      color: #8b8b8b;
+    }
+  }
+  
+  .socials {
+    float: right;
+    width: 35%;
+  }
 }
