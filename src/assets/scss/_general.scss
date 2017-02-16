@@ -2,10 +2,18 @@
   padding: 0 $container-gutter;
 }
 
+.site-section {
+  padding: 40px 0;
+}
+
 @include desktop {
   .container {
     width: $dt-container-width;
     padding: 0 $dt-container-gutter;
     margin: 0 auto;
+  }
+  
+  .site-section {
+    padding: 60px 0;
   }
 }
