@@ -21,16 +21,10 @@
   }
   
   .services-list {
-    font-size: 0;
-    text-align: center;
+    @include justify-elements;
   }
   
   .service-item {
-    display: inline-block;
     vertical-align: top;
-    
-    &:not(:first-child) {
-      margin-left: 20px;
-    }
   }
 }
