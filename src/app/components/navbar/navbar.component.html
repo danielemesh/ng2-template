@@ -1,0 +1,17 @@
+<nav class="navbar">
+
+  <div class="navbar-container container">
+
+    <a href="!#" class="logo-wrapper">
+      <img src="assets/images/logo.png" alt="logo" class="logo">
+    </a>
+
+    <ul class="menu">
+      <li *ngFor="let navLink of navLinks" class="menu-item">
+        <a class="menu-item-link {{ navLink.cssClass }}">{{ navLink.text }}</a>
+      </li>
+    </ul>
+
+  </div>
+
+</nav>
