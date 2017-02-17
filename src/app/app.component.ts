@@ -16,6 +16,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.getBalloons();
+    console.log("", this.balloons);
   }
 
   getBalloons(): void {

@@ -1,5 +1,9 @@
 @import '../../assets/styles/shared';
 
+:host {
+  display: inline-block;
+}
+
 .balloon {
   overflow: hidden;
   position: relative;
@@ -9,7 +13,6 @@
   font-size: 17px;
   color: #fff;
   background-color: #000;
-  text-align: center;
   transition: box-shadow 0.4s ease-in-out;
   
   &:hover {
@@ -24,34 +27,34 @@
       transform: translate3D(-50%, -50%, 0);
     }
   }
-  
-  .front {
-    @include center-vertical;
-    opacity: 1;
-    transition: opacity 0.4s;
-  }
-  
-  .balloon-icon {
-    display: block;
-    margin: 0 auto;
-  }
-  
-  .title {
-    display: block;
-    padding-top: 10px;
-    font-size: 1em;
-  }
-  
-  .back {
-    opacity: 0;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 80%;
-    font-size: 0.7em;
-    transform: translate3D(-50%, 0, 0);
-    transition: transform 0.5s ease-in-out, opacity 0.6s ease-in-out;
-  }
+}
+
+.front {
+  @include center-vertical;
+  opacity: 1;
+  transition: opacity 0.4s;
+}
+
+.balloon-icon {
+  display: block;
+  margin: 0 auto;
+}
+
+.title {
+  display: block;
+  padding-top: 10px;
+  font-size: 1em;
+}
+
+.back {
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 80%;
+  font-size: 0.7em;
+  transform: translate3D(-50%, 0, 0);
+  transition: transform 0.5s ease-in-out, opacity 0.6s ease-in-out;
 }
 
 @include desktop {
