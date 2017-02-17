@@ -2,20 +2,19 @@
 
 .navbar {
   opacity: 0.9;
+  position: relative;
+  z-index: 1;
   height: $navbar-height;
   background-color: #fff;
 }
 
 .navbar-container {
-  @include clearfix;
-  
-  &, > * {
-    height: 100%;
-  }
+  height: 100%;
 }
 
 .logo-wrapper {
-  float: left;
+  display: block;
+  height: 100%;
 }
 
 .logo {
@@ -28,16 +27,15 @@
 /* Menu
 =============== */
 .menu {
-  float: right;
-  line-height: $navbar-height;
+  margin: 0 -#{$container-gutter};
   font-size: 0;
+  line-height: $navbar-height;
   font-family: $ff-segoe;
   color: #454545;
+  background-color: #fff;
 }
 
 .menu-item {
-  display: inline-block;
-  vertical-align: top;
   padding: 0 1em;
   font-size: 13px;
 }
@@ -51,14 +49,28 @@
     border-radius: 3px;
     color: #fff;
     background-color: #de6d6e;
+    
+    &:before {
+      padding-right: 5px;
+    }
   }
 }
 
 /* Desktop
 ============================= */
 @include desktop {
+  $menu-item-font-size: 17px;
+  
   .navbar {
     height: $dt-navbar-height;
+  }
+  
+  .navbar-container {
+    @include clearfix;
+  }
+  
+  .logo-wrapper {
+    float: left;
   }
   
   .logo {
@@ -66,10 +78,40 @@
   }
   
   .menu {
+    float: right;
+    height: 100%;
     line-height: $dt-navbar-height;
   }
   
+  .menu-item {
+    display: inline-block;
+    vertical-align: top;
+    font-size: $menu-item-font-size;
+  }
+  
   .menu-item-link {
-    font-size: 17px;
+    position: relative;
+    
+    &:after {
+      position: absolute;
+      top: ($dt-navbar-height / 2) - ($menu-item-font-size / 2);
+      left: 0;
+      width: 0;
+      height: 1px;
+      background-color: #000;
+      transition: width 0.3s;
+      content: '';
+    }
+    
+    &:hover:after {
+      width: 100%;
+    }
+  
+    &.login-btn {
+      transition: box-shadow 0.3s;
+    
+      &:hover { box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.3); }
+      &:after { display: none; }
+    }
   }
 }
