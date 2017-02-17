@@ -9,13 +9,15 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { BalloonComponent } from './balloon/balloon.component';
 
 import { AppService } from "./app.service";
+import { CardsListComponent } from './cards-list/cards-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     NavbarComponent,
-    BalloonComponent
+    BalloonComponent,
+    CardsListComponent
   ],
   imports: [
     BrowserModule,
