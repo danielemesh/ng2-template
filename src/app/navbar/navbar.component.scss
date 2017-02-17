@@ -1,0 +1,77 @@
+@import '../../assets/styles/shared';
+
+.navbar {
+  opacity: 0.9;
+  height: $navbar-height;
+  background-color: #fff;
+}
+
+.navbar-container {
+  @include clearfix;
+  
+  &, > * {
+    height: 100%;
+  }
+}
+
+.logo-wrapper {
+  float: left;
+}
+
+.logo {
+  display: block;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80px;
+  height: auto;
+}
+
+/* Menu
+=============== */
+.menu {
+  float: right;
+  line-height: $navbar-height;
+  font-size: 0;
+  font-family: $ff-segoe;
+  color: #454545;
+}
+
+.menu-item {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 1em;
+  font-size: 13px;
+}
+
+.menu-item-link {
+  display: block;
+  
+  &.login-btn {
+    display: inline;
+    padding: 6px 12px;
+    border-radius: 3px;
+    color: #fff;
+    background-color: #de6d6e;
+  }
+}
+
+/* Desktop
+============================= */
+@include desktop {
+  .navbar {
+    height: $dt-navbar-height;
+  }
+  
+  .logo {
+    width: auto;
+  }
+  
+  .menu {
+    line-height: $dt-navbar-height;
+  }
+  
+  .menu-item-link {
+    font-size: 17px;
+  }
+}
