@@ -34,3 +34,15 @@
     content: '';
   }
 }
+
+@mixin center-vertical {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin center-absolute {
+  @include center-vertical;
+  left: 50%;
+  transform: translate3D(-50%, -50%, 0);
+}

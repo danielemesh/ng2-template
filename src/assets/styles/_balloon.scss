@@ -16,6 +16,7 @@
     .front {
       opacity: 0.3;
     }
+    
     .back {
       opacity: 1;
       transform: translate3D(-50%, -50%, 0);
@@ -28,10 +29,8 @@
   &.ipad { background-color: #e48f23; }
   
   .front {
+    @include center-vertical;
     opacity: 1;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
     transition: opacity 0.4s;
   }
   
