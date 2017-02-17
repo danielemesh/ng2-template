@@ -30,11 +30,11 @@
 
 @font-face {
   font-family: 'icomoon';
-  src:  url('#{$fonts-path}/icomoon.eot?diccg2');
-  src:  url('#{$fonts-path}/icomoon.eot?diccg2#iefix') format('embedded-opentype'),
-  url('#{$fonts-path}/icomoon.ttf?diccg2') format('truetype'),
-  url('#{$fonts-path}/icomoon.woff?diccg2') format('woff'),
-  url('#{$fonts-path}/icomoon.svg?diccg2#icomoon') format('svg');
+  src:  url('#{$fonts-path}/icomoon.eot?o4nzrv');
+  src:  url('#{$fonts-path}/icomoon.eot?o4nzrv#iefix') format('embedded-opentype'),
+  url('#{$fonts-path}/icomoon.ttf?o4nzrv') format('truetype'),
+  url('#{$fonts-path}/icomoon.woff?o4nzrv') format('woff'),
+  url('#{$fonts-path}/icomoon.svg?o4nzrv#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -69,5 +69,9 @@
 .icon-twitter:before {
   content: "\ea96";
 }
+
+
+
+
 
 
