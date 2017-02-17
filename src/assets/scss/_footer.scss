@@ -2,4 +2,44 @@
   padding: 35px 0;
   background: url('#{$img-path}/footer-bg.jpg') no-repeat;
   background-size: cover;
+  
+  
+}
+
+@include desktop {
+  .site-footer {
+    
+  }
+  
+  .footer-nav {
+    width: 65%;
+    font-size: 22px;
+    line-height: 22px;
+  }
+  
+  .footer-menu {
+    @include justify-elements;
+    
+    .menu-item {
+      font-size: 1em;
+      color: #aeaeae;
+    }
+    
+    .sub-menu {
+      padding-top: 25px;
+      font-size: 0.7em;
+      color: #8b8b8b;
+    }
+  }
+  
+  .footer-socials-credits {
+    width: 30%;
+  }
+  
+  .credits {
+    color: #8b8b8b;
+    font-size: 15px;
+    line-height: 22px;
+    text-align: center;
+  }
 }
