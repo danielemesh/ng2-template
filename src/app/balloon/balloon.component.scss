@@ -1,3 +1,5 @@
+@import '../../assets/styles/shared';
+
 .balloon {
   overflow: hidden;
   position: relative;
@@ -22,11 +24,6 @@
       transform: translate3D(-50%, -50%, 0);
     }
   }
-  
-  &.tickets { background-color: #4eb9f4; }
-  &.camera { background-color: #6fc125; }
-  &.beermug { background-color: #ff5649; }
-  &.ipad { background-color: #e48f23; }
   
   .front {
     @include center-vertical;
