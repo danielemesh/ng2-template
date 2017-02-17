@@ -15,61 +15,8 @@
 
   <ul class="services-list container">
 
-    <li class="service-item">
-      <!-- component -->
-      <div class="balloon tickets">
-        <div class="front">
-          <img src="assets/images/tickets.png" alt="" class="balloon-icon">
-          <span class="title">Tickets</span>
-        </div>
-        <div class="back">
-          Lorem Ipsum is simply dummy text of the
-          printing and typesetting industry. Lorem
-          Ipsum has been the industry's standard dummy text
-        </div>
-      </div>
-    </li>
-    <li class="service-item">
-      <!-- component -->
-      <div class="balloon camera">
-        <div class="front">
-          <img src="assets/images/camera.png" alt="" class="balloon-icon">
-          <span class="title">Tickets</span>
-        </div>
-        <div class="back">
-          Lorem Ipsum is simply dummy text of the
-          printing and typesetting industry. Lorem
-          Ipsum has been the industry's standard dummy text
-        </div>
-      </div>
-    </li>
-    <li class="service-item">
-      <!-- component -->
-      <div class="balloon beermug">
-        <div class="front">
-          <img src="assets/images/beermug.png" alt="" class="balloon-icon">
-          <span class="title">Tickets</span>
-        </div>
-        <div class="back">
-          Lorem Ipsum is simply dummy text of the
-          printing and typesetting industry. Lorem
-          Ipsum has been the industry's standard dummy text
-        </div>
-      </div>
-    </li>
-    <li class="service-item">
-      <!-- component -->
-      <div class="balloon ipad">
-        <div class="front">
-          <img src="assets/images/ipad.png" alt="" class="balloon-icon">
-          <span class="title">Tickets</span>
-        </div>
-        <div class="back">
-          Lorem Ipsum is simply dummy text of the
-          printing and typesetting industry. Lorem
-          Ipsum has been the industry's standard dummy text
-        </div>
-      </div>
+    <li class="service-item" *ngFor="let balloon of balloons">
+      <balloon [balloon]="balloon"></balloon>
     </li>
 
   </ul>
