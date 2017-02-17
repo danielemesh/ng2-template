@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { NavLink } from "./nav-link";
 
 @Component({
   selector: 'navbar',
@@ -8,12 +7,12 @@ import { NavLink } from "./nav-link";
 })
 export class NavbarComponent implements OnInit {
 
-  navLinks: NavLink[] = [
+  menuItems: any[] = [
     { href: "", text: "Home"},
     { href: "", text: "About Us"},
     { href: "", text: "Services"},
     { href: "", text: "Contact"},
-    { href: "", text: "Login", cssClass: "login-btn"},
+    { href: "", text: "Login", cssClass: "login-btn icon-user"},
   ];
 
   constructor() { }

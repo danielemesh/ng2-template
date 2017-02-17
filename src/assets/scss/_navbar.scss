@@ -45,23 +45,11 @@
     display: block;
     
     &.login-btn {
-      position: relative;
       display: inline;
-      padding: 6px 12px 6px 30px;
+      padding: 6px 12px;
       border-radius: 3px;
       color: #fff;
       background-color: #de6d6e;
-      
-      &:before {
-        display: block;
-        position: absolute;
-        top: 6px;
-        left: 12px;
-        width: 13px;
-        height: 14px;
-        background: url('#{$img-path}/icon-person.png') no-repeat;
-        content: "";
-      }
     }
   }
 }
@@ -82,12 +70,6 @@
     
     .menu-item-link {
       font-size: 17px;
-      
-      &.login-btn {
-        &:before {
-          top: 10px;
-        }
-      }
     }
   }
 }
