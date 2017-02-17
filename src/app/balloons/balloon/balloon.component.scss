@@ -1,7 +1,9 @@
-@import '../../assets/styles/shared';
+@import '../../../assets/styles/shared';
 
 :host {
   display: inline-block;
+  vertical-align: top;
+  width: 25%;
 }
 
 .balloon {
@@ -9,6 +11,7 @@
   position: relative;
   width: 150px;
   height: 150px;
+  margin: 0 auto;
   border-radius: 50%;
   font-size: 17px;
   color: #fff;
@@ -40,7 +43,7 @@
   margin: 0 auto;
 }
 
-.title {
+.balloon-title {
   display: block;
   padding-top: 10px;
   font-size: 1em;
