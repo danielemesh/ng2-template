@@ -11,6 +11,7 @@ import { CardsListComponent } from './cards-list/cards-list.component';
 import { BalloonsComponent } from './balloons/balloons.component';
 import { AppRoutingModule } from "./app-routing.module";
 import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { FooterComponent } from './footer/footer.component';
     BalloonComponent,
     CardsListComponent,
     FooterComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
