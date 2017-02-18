@@ -8,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  title: string = 'WELCOME TO PINK';
+  subtitle: string = 'A multi purpose theme from cssauthor.com';
+
   constructor() { }
 
   ngOnInit() {
