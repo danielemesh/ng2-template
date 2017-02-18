@@ -10,6 +10,7 @@ import { BalloonComponent } from './balloons/balloon/balloon.component';
 import { CardsListComponent } from './cards-list/cards-list.component';
 import { BalloonsComponent } from './balloons/balloons.component';
 import { AppRoutingModule } from "./app-routing.module";
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { AppRoutingModule } from "./app-routing.module";
     BalloonsComponent,
     BalloonComponent,
     CardsListComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
