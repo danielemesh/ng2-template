@@ -6,14 +6,42 @@
   z-index: 1;
   height: $navbar-height;
   background-color: #fff;
+  
+  &.collapsed {
+    .menu {
+      height: 300px;
+    }
+    
+    .hamburger {
+      transform: scale(0.7);
+    }
+  
+    .bar {
+      background: transparent;
+      transition: background 0s 0.2s;
+    
+      &:before {
+        top: 0;
+        transform: rotate(45deg);
+        transition: top 0.2s 0s, transform 0.2s 0.2s;
+      }
+    
+      &:after {
+        bottom: 0;
+        transform: rotate(-45deg);
+        transition: bottom 0.2s 0s, transform 0.2s 0.2s;
+      }
+    }
+  }
 }
 
 .navbar-container {
   height: 100%;
+  font-size: 0;
 }
 
 .logo-wrapper {
-  display: block;
+  display: inline-block;
   height: 100%;
 }
 
@@ -24,15 +52,60 @@
   height: auto;
 }
 
+/* Hamburger
+============================= */
+.hamburger {
+  position: absolute;
+  right: 15px;
+  width: 35px;
+  height: 100%;
+  transition: transform 0.2s;
+  user-select: none;
+}
+
+.bar {
+  position: absolute;
+  top: 44%;
+  width: 100%;
+  height: 4px;
+  background: #000;
+  transition: background 0s 0.2s;
+  
+  &:before,
+  &:after {
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #000;
+    content: "";
+  }
+  
+  &:before {
+    top: -9px;
+    transition: top 0.2s 0.2s, transform 0.2s 0s;
+  }
+  
+  &:after {
+    bottom: -9px;
+    transition: bottom 0.2s 0.2s, transform 0.2s 0s;
+  }
+}
+
+
 /* Menu
-=============== */
+============================= */
 .menu {
+  overflow: hidden;
+  height: 0;
   margin: 0 -#{$container-gutter};
   font-size: 0;
   line-height: $navbar-height;
   font-family: $ff-segoe;
   color: #454545;
   background-color: #fff;
+  transition: height 0.5s;
 }
 
 .menu-item {
@@ -56,13 +129,19 @@
   }
 }
 
-/* Desktop
+/* Tablet
 ============================= */
-@include desktop {
-  $menu-item-font-size: 17px;
+@include tablet {
+  .navbar.collapsed .menu {
+    height: auto;
+  }
+  
+  .hamburger {
+    display: none;
+  }
   
   .navbar {
-    height: $dt-navbar-height;
+    height: $tb-navbar-height;
   }
   
   .navbar-container {
@@ -80,21 +159,32 @@
   .menu {
     float: right;
     height: 100%;
-    line-height: $dt-navbar-height;
+    line-height: $tb-navbar-height;
   }
   
   .menu-item {
     display: inline-block;
     vertical-align: top;
+    font-size: 15px;
+  }
+}
+
+/* Desktop
+============================= */
+@include desktop {
+  // Local variables
+  $menu-item-font-size: 17px;
+  
+  .menu-item {
     font-size: $menu-item-font-size;
   }
   
   .menu-item-link {
     position: relative;
-    
+
     &:after {
       position: absolute;
-      top: ($dt-navbar-height / 2) - ($menu-item-font-size / 2);
+      top: ($tb-navbar-height / 2) - ($menu-item-font-size / 2);
       left: 0;
       width: 0;
       height: 1px;
@@ -102,14 +192,14 @@
       transition: width 0.3s;
       content: '';
     }
-    
+
     &:hover:after {
       width: 100%;
     }
-  
+
     &.login-btn {
       transition: box-shadow 0.3s;
-    
+
       &:hover { box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.3); }
       &:after { display: none; }
     }
