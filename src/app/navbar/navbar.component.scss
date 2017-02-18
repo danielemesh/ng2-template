@@ -1,5 +1,12 @@
 @import '../../assets/styles/shared';
 
+// Local Variables
+$hb-width: 30px;
+$hb-bar-height: 3px;
+$hb-bar-offset: 7px;
+$hb-color: #de6d6e;
+$hb-anim-time: 0.2s;
+
 .navbar {
   opacity: 0.9;
   position: relative;
@@ -18,18 +25,18 @@
   
     .bar {
       background: transparent;
-      transition: background 0s 0.2s;
+      transition: background 0s $hb-anim-time;
     
       &:before {
         top: 0;
         transform: rotate(45deg);
-        transition: top 0.2s 0s, transform 0.2s 0.2s;
+        transition: top $hb-anim-time 0s, transform $hb-anim-time $hb-anim-time;
       }
     
       &:after {
         bottom: 0;
         transform: rotate(-45deg);
-        transition: bottom 0.2s 0s, transform 0.2s 0.2s;
+        transition: bottom $hb-anim-time 0s, transform $hb-anim-time $hb-anim-time;
       }
     }
   }
@@ -57,9 +64,9 @@
 .hamburger {
   position: absolute;
   right: 15px;
-  width: 35px;
+  width: $hb-width;
   height: 100%;
-  transition: transform 0.2s;
+  transition: transform $hb-anim-time;
   user-select: none;
 }
 
@@ -67,9 +74,9 @@
   position: absolute;
   top: 44%;
   width: 100%;
-  height: 4px;
-  background: #000;
-  transition: background 0s 0.2s;
+  height: $hb-bar-height;
+  background: $hb-color;
+  transition: background 0s $hb-anim-time;
   
   &:before,
   &:after {
@@ -77,19 +84,19 @@
     display: block;
     left: 0;
     width: 100%;
-    height: 4px;
-    background-color: #000;
+    height: $hb-bar-height;
+    background-color: $hb-color;
     content: "";
   }
   
   &:before {
-    top: -9px;
-    transition: top 0.2s 0.2s, transform 0.2s 0s;
+    top: -$hb-bar-offset;
+    transition: top $hb-anim-time $hb-anim-time, transform $hb-anim-time 0s;
   }
   
   &:after {
-    bottom: -9px;
-    transition: bottom 0.2s 0.2s, transform 0.2s 0s;
+    bottom: -$hb-bar-offset;
+    transition: bottom $hb-anim-time $hb-anim-time, transform $hb-anim-time 0s;
   }
 }
 
