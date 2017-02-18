@@ -123,6 +123,10 @@ $hb-anim-time: 0.2s;
 .menu-item-link {
   display: block;
   
+  &.active {
+    color: #de6d6e;
+  }
+  
   &.login-btn {
     display: inline;
     padding: 6px 12px;
@@ -195,14 +199,14 @@ $hb-anim-time: 0.2s;
       left: 0;
       width: 0;
       height: 1px;
-      background-color: #000;
+      background-color: #de6d6e;
       transition: width 0.3s;
       content: '';
     }
 
     &.active,
     &:hover {
-      &:after { width: 100%; }
+        &:after { width: 100%; }
     }
 
     &.login-btn {
