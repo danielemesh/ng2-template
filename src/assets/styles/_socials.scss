@@ -1,3 +1,5 @@
+/* Mobile
+============================= */
 .socials {
   $social-item-size: 40px;
   
@@ -25,6 +27,8 @@
   }
 }
 
+/* Desktop
+============================= */
 @include desktop {
   .socials {
     $dt-social-item-size: 50px;

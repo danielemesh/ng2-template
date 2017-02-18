@@ -22,7 +22,7 @@
     margin-bottom: 1.5em;
     border-bottom: 1px solid;
     font-size: 0.7em;
-    color: #8b8b8b;
+    color: $light-gray;
   }
   
   .sub-menu-item {
@@ -45,7 +45,7 @@
   font-size: 0.7em;
   line-height: 1em;
   text-align: center;
-  color: #8b8b8b;
+  color: $light-gray;
 }
 
 @include tablet {

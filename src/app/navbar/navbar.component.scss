@@ -1,12 +1,17 @@
 @import '../../assets/styles/shared';
 
 // Local Variables
+$menu-items-count: 5;
+
+// hb => hamburger
 $hb-width: 30px;
 $hb-bar-height: 3px;
 $hb-bar-offset: 7px;
-$hb-color: #de6d6e;
+$hb-color: $color-secondary;
 $hb-anim-time: 0.2s;
 
+/* Mobile
+============================= */
 .navbar {
   opacity: 0.9;
   position: relative;
@@ -16,7 +21,7 @@ $hb-anim-time: 0.2s;
   
   &.collapsed {
     .menu {
-      height: 200px;
+      height: $navbar-height * $menu-items-count;
     }
     
     .hamburger {
@@ -124,7 +129,7 @@ $hb-anim-time: 0.2s;
   display: block;
   
   &.active {
-    color: #de6d6e;
+    color: $color-secondary;
   }
   
   &.login-btn {
@@ -132,7 +137,7 @@ $hb-anim-time: 0.2s;
     padding: 6px 12px;
     border-radius: 3px;
     color: #fff;
-    background-color: #de6d6e;
+    background-color: $color-secondary;
     
     &:before {
       padding-right: 5px;
@@ -199,7 +204,7 @@ $hb-anim-time: 0.2s;
       left: 0;
       width: 0;
       height: 1px;
-      background-color: #de6d6e;
+      background-color: $color-secondary;
       transition: width 0.3s;
       content: '';
     }

@@ -1,3 +1,5 @@
+/* Mobile
+============================= */
 .container {
   padding-left: $container-gutter;
   padding-right: $container-gutter;
@@ -7,6 +9,8 @@
   padding: 40px 0;
 }
 
+/* Desktop
+============================= */
 @include desktop {
   .container {
     width: $dt-container-width;
