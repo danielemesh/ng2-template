@@ -12,7 +12,7 @@
 
     <ul class="menu">
       <li *ngFor="let menuItem of menuItems" class="menu-item">
-        <a href="{{ menuItem.href }}" class="menu-item-link {{ menuItem.cssClass }}">{{ menuItem.text }}</a>
+        <a routerLink="{{ menuItem.link }}" class="menu-item-link {{ menuItem.cssClass }}">{{ menuItem.text }}</a>
       </li>
     </ul>
 
