@@ -1,9 +1,11 @@
+// 768px and up
 @mixin tablet {
-  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+  @media (min-width: #{$tablet-width}) {
     @content;
   }
 }
 
+// 1024px and up
 @mixin desktop {
   @media (min-width: #{$desktop-width}) {
     @content;

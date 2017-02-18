@@ -6,10 +6,10 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { BalloonComponent } from './balloon/balloon.component';
+import { BalloonComponent } from './balloons/balloon/balloon.component';
 
-import { AppService } from "./app.service";
 import { CardsListComponent } from './cards-list/cards-list.component';
+import { BalloonsComponent } from './balloons/balloons.component';
 
 @NgModule({
   declarations: [
@@ -17,14 +17,15 @@ import { CardsListComponent } from './cards-list/cards-list.component';
     HeaderComponent,
     NavbarComponent,
     BalloonComponent,
-    CardsListComponent
+    CardsListComponent,
+    BalloonsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [AppService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

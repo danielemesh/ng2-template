@@ -1,5 +1,6 @@
 // Global Variables
 
+$mobile-width: 640px;
 $tablet-width: 768px;
 $desktop-width: 1024px;
 
@@ -18,9 +19,12 @@ $header-height: 400px;
 $navbar-height: 60px;
 $container-gutter: 15px;
 
+/* Tablet (tb => tablet)
+============================= */
+$tb-navbar-height: 90px;
+
 /* Desktop (dt => desktop)
 ============================= */
 $dt-header-height: 590px;
 $dt-container-width: 1024px;
 $dt-container-gutter: 35px;
-$dt-navbar-height: 90px;

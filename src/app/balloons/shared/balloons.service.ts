@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 
-import { Balloons } from './balloon/mock-balloons';
-import { Balloon } from "./balloon/balloon.model";
+import { Balloon } from "./balloon.model";
+import { Balloons } from "./mock-balloons";
 
 @Injectable()
-export class AppService {
+export class BalloonsService {
 
   getBalloons(): Promise<Balloon[]> {
     return Promise.resolve(Balloons);

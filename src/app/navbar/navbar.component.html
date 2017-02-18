@@ -1,6 +1,10 @@
-<nav class="navbar">
+<nav class="navbar" [class.collapsed]="isCollapsed">
 
   <div class="navbar-container container">
+
+    <div class="hamburger" (click)="toggleMenu()">
+      <span class="bar"></span>
+    </div>
 
     <a href="!#" class="logo-wrapper">
       <img src="assets/images/logo.png" alt="logo" class="logo">

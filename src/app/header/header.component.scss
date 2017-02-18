@@ -14,7 +14,7 @@
   bottom: 15%;
   width: 100%;
   color: #fff;
-  font-size: 40px;
+  font-size: 30px;
   text-align: center;
   line-height: 1.2;
 }
@@ -26,6 +26,14 @@
 
 .header-text-subtext {
   font-size: 0.35em;
+}
+
+/* Tablet
+============================= */
+@include tablet {
+  .header-texts-wrapper {
+    font-size: 40px;
+  }
 }
 
 /* Desktop

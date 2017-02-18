@@ -1,12 +1,12 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { Balloon } from './balloon.model';
+import { Balloon } from '../shared/balloon.model';
 
 @Component({
   moduleId: module.id,
   selector: 'balloon',
-  templateUrl: './balloon.component.html',
-  styleUrls: ['./balloon.component.scss']
+  templateUrl: 'balloon.component.html',
+  styleUrls: ['balloon.component.scss']
 })
 export class BalloonComponent implements OnInit {
 

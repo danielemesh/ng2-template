@@ -2,44 +2,87 @@
   padding: 35px 0;
   background: url('#{$img-path}/footer-bg.jpg') no-repeat;
   background-size: cover;
-  
-  
 }
 
-@include desktop {
-  .site-footer {
-    
+.footer-nav {
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.footer-menu {
+  .menu-item {
+    font-size: 1em;
+    color: #aeaeae;
   }
   
+  .sub-menu {
+    padding: 1em 0;
+    margin-bottom: 1.5em;
+    border-bottom: 1px solid;
+    font-size: 0.7em;
+    color: #8b8b8b;
+  }
+  
+  .sub-menu-item {
+    display: inline-block;
+    vertical-align: top;
+    
+    &:after {
+      display: inline-block;
+      vertical-align: top;
+      width: 1px;
+      height: 1em;
+      margin: 3px 0.4em 0;
+      background-color: #fff;
+      content: '';
+    }
+  }
+}
+
+.credits {
+  font-size: 0.7em;
+  line-height: 1em;
+  text-align: center;
+  color: #8b8b8b;
+}
+
+@include tablet {
   .footer-nav {
+    float: left;
     width: 65%;
-    font-size: 22px;
-    line-height: 22px;
   }
   
   .footer-menu {
     @include justify-elements;
     
     .menu-item {
-      font-size: 1em;
-      color: #aeaeae;
+      vertical-align: top;
     }
-    
+  
     .sub-menu {
-      padding-top: 25px;
-      font-size: 0.7em;
-      color: #8b8b8b;
+      padding: 1em 0 0;
+      margin-bottom: 0;
+      border-bottom: none;
+    }
+  
+    .sub-menu-item {
+      display: block;
+    
+      &:after {
+        display: none;
+      }
     }
   }
   
   .footer-socials-credits {
+    float: right;
     width: 30%;
   }
-  
-  .credits {
-    color: #8b8b8b;
-    font-size: 15px;
+}
+
+@include desktop {
+  .footer-nav {
+    font-size: 22px;
     line-height: 22px;
-    text-align: center;
   }
 }
