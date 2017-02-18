@@ -14,7 +14,7 @@
       <li *ngFor="let menuItem of menuItems" class="menu-item">
         <a routerLink="{{ menuItem.link }}"
            routerLinkActive="active"
-           [routerLinkActiveOptions]="{ exact: true }" class="menu-item-link {{ menuItem.cssClass }}">{{ menuItem.text }}</a>
+           [routerLinkActiveOptions]="{ exact: true }" (click)="toggleMenu()" class="menu-item-link {{ menuItem.cssClass }}">{{ menuItem.text }}</a>
       </li>
     </ul>
 
