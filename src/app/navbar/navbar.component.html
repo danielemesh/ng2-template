@@ -6,13 +6,15 @@
       <span class="bar"></span>
     </div>
 
-    <a href="!#" class="logo-wrapper">
+    <a routerLink="/" class="logo-wrapper">
       <img src="assets/images/logo.png" alt="logo" class="logo">
     </a>
 
     <ul class="menu">
       <li *ngFor="let menuItem of menuItems" class="menu-item">
-        <a routerLink="{{ menuItem.link }}" class="menu-item-link {{ menuItem.cssClass }}">{{ menuItem.text }}</a>
+        <a routerLink="{{ menuItem.link }}"
+           routerLinkActive="active"
+           [routerLinkActiveOptions]="{ exact: true }" class="menu-item-link {{ menuItem.cssClass }}">{{ menuItem.text }}</a>
       </li>
     </ul>
 

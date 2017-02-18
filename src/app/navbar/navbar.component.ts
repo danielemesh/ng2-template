@@ -15,7 +15,7 @@ export class NavbarComponent implements OnInit {
     { link: "/about", text: "About Us"},
     { link: "/services", text: "Services"},
     { link: "/contact", text: "Contact"},
-    { link: "/", text: "Login", cssClass: "login-btn icon-user"},
+    { link: "/login", text: "Login", cssClass: "login-btn icon-user"},
   ];
 
   constructor() { }
