@@ -1,3 +1,5 @@
+@import '../../assets/styles/shared';
+
 .site-footer {
   padding: 35px 0;
   background: url('#{$img-path}/footer-bg.jpg') no-repeat;
@@ -58,16 +60,16 @@
     .menu-item {
       vertical-align: top;
     }
-  
+    
     .sub-menu {
       padding: 1em 0 0;
       margin-bottom: 0;
       border-bottom: none;
     }
-  
+    
     .sub-menu-item {
       display: block;
-    
+      
       &:after {
         display: none;
       }

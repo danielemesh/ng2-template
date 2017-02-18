@@ -54,7 +54,7 @@ table {
   box-sizing: border-box;
 }
 
-a:visited {
+a, a:visited, a:focus {
   color: inherit;
 }
 

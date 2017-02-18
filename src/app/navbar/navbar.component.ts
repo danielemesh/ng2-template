@@ -11,11 +11,11 @@ export class NavbarComponent implements OnInit {
   isCollapsed: boolean = false;
 
   menuItems: any[] = [
-    { href: "#", text: "Home"},
-    { href: "#", text: "About Us"},
-    { href: "#", text: "Services"},
-    { href: "#", text: "Contact"},
-    { href: "#", text: "Login", cssClass: "login-btn icon-user"},
+    { link: "/", text: "Home"},
+    { link: "/about", text: "About Us"},
+    { link: "/services", text: "Services"},
+    { link: "/contact", text: "Contact"},
+    { link: "/login", text: "Login", cssClass: "login-btn icon-user"},
   ];
 
   constructor() { }
