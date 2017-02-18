@@ -5,7 +5,8 @@
 .header {
   position: relative;
   height: $header-height;
-  background: url('#{$img-path}/header-bg-2.jpg') no-repeat;
+  background-repeat: no-repeat;
+  background-image: url('#{$img-path}/header-bg-mobile.jpg');
   background-size: cover;
 }
 
@@ -31,6 +32,10 @@
 /* Tablet
 ============================= */
 @include tablet {
+  .header {
+    height: $tb-header-height;
+  }
+  
   .header-texts-wrapper {
     font-size: 40px;
   }
@@ -41,6 +46,7 @@
 @include desktop {
   .header {
     height: $dt-header-height;
+    background-image: url('#{$img-path}/header-bg.jpg');
   }
   
   .growing-circles {
