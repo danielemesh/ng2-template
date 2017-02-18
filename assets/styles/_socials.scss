@@ -1,0 +1,53 @@
+.socials {
+  $social-item-size: 40px;
+  
+  @include justify-elements;
+  width: 50%;
+  min-width: 200px;
+  margin: 0 auto;
+  font-size: $social-item-size / 2;
+  
+  .social-item {
+    vertical-align: top;
+    width: $social-item-size;
+    height: $social-item-size;
+    border-radius: 50%;
+    line-height: $social-item-size;
+    text-align: center;
+    background-color: #696b6a;
+    color: #252825;
+    cursor: pointer;
+    
+    &.icon-basketball {
+      font-size: 1.4em;
+      line-height: 1.6em;
+    }
+  }
+}
+
+@include desktop {
+  .socials {
+    $dt-social-item-size: 50px;
+  
+    width: auto;
+    padding: 20px;
+    font-size: $dt-social-item-size / 2;
+    
+    .social-item {
+      width: $dt-social-item-size;
+      height: $dt-social-item-size;
+      font-size: $dt-social-item-size / 2;
+      line-height: $dt-social-item-size;
+      
+      &:hover {
+        animation: rotate 0.5s;
+      }
+    }
+  }
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(20deg); }
+  100% { transform: rotate(0deg); }
+}

@@ -1,0 +1,31 @@
+// Global Variables
+
+$mobile-width: 640px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+$img-path: 'assets/images/';
+$fonts-path: 'assets/fonts';
+
+/* Fonts
+============================= */
+$ff-univers-lt: 'Univers LT 45';
+$ff-segoe: 'Segoe UI';
+$ff-atlas-bold: 'Alte Haas Grotesk';
+
+/* Mobile
+============================= */
+$header-height: 250px;
+$navbar-height: 40px;
+$container-gutter: 15px;
+
+/* Tablet (tb => tablet)
+============================= */
+$tb-header-height: 400px;
+$tb-navbar-height: 90px;
+
+/* Desktop (dt => desktop)
+============================= */
+$dt-header-height: 590px;
+$dt-container-width: 1024px;
+$dt-container-gutter: 35px;
